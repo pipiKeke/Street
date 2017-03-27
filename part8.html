@@ -125,7 +125,13 @@ function update() {
     }
     
 
-    
+
+    if (cursors.down.isDown && player.body.touching.down && lastPosition === 'left'){
+            player.frame = 119;
+    }else  if (cursors.down.isDown && player.body.touching.down && lastPosition === 'right'){
+            player.frame = 112;
+    }
+
     if (cursors.left.isDown && player.body.touching.down)
     {
         //  Move to the left
